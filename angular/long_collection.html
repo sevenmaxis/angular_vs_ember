@@ -1,0 +1,24 @@
+---
+layout: angular
+title: Angular Long Collection
+javascript: /js/angular/long_collection.js
+---
+
+<h1>{{ page.title }}</h1>
+
+<div id="angular-app" ng-app>
+  <div ng-controller="CheckboxController">
+    <fieldset>
+      <label for="num-checkbox">Number of checkboxes to render</label>
+      <input ng-model="numCheckbox" />
+      <button ng-click="renderCheckbox()">Checkbox</button>
+    </fieldset>
+    <hr />
+
+    <ul class="thumbnails">
+      <li class="thumbnail" ng-repeat="checkbox in checkboxes">
+        <input type="checkbox" ng-checked="true"/>
+      </li>
+    </ul>
+  </div>
+</div>
